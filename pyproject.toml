@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "product-page-generator"
+version = "1.0.0"
+description = "CSV 상품 정보 → HTML 상세페이지 + 인스타 캡션 + 광고 카피 자동 생성"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.9"
+keywords = ["product", "page", "generator", "ecommerce", "marketing", "automation", "beauty"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+product-page = "src.main:main"
+
+[project.urls]
+Homepage = "https://github.com/sy501735-max/product-page-generator"
+Repository = "https://github.com/sy501735-max/product-page-generator"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
